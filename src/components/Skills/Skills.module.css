@@ -12,7 +12,9 @@
 }
 
 .list {
+    position: relative;
     display: flex;
+    align-items: center;
     gap: 0.5rem;
     background-color: var(--color-skills--list-bg);
     width: fit-content;
@@ -22,6 +24,7 @@
 }
 
 .listItem {
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,6 +32,25 @@
     background-color: var(--color-skills--list-item-bg);
     padding: 0.5rem;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.hideNames::selection {
+    background-color: transparent;
+}
+
+.hideNames {
+    font-size: 30px;
+    line-height: 15px;
+    padding: 0.5rem;
+    padding-top: 0;
+    border-radius: 99px;
+    margin: 0;
+    position: absolute;
+    right: 5px;
+    top: -22px;
+    cursor: pointer;
+    background-color: var(--color-skills--list-bg);
 }
 
 .name {
