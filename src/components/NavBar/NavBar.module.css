@@ -1,0 +1,28 @@
+.nav {
+    --color-nav--bottom-border: rgba(255, 255, 255, 0.393);
+    --color-nav--link: rgba(255, 255, 255, 0.888);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-nav--bottom-border);
+    backdrop-filter: blur(10px);
+}
+
+.navLogo {
+    width: 30px;
+}
+
+.navLinkList {
+    display: flex;
+    gap: 1rem;
+}
+
+.navLink {
+    color: var(--color-nav--link);
+}
