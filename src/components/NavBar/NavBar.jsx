@@ -1,5 +1,5 @@
 import styles from "./NavBar.module.css";
-import NavLogo from "../../assets/react.svg";
+import NavLogo from "../../assets/site-logo.png";
 
 const NavBar = () => {
   const navLinks = [
@@ -8,7 +8,7 @@ const NavBar = () => {
       link: "https://www.google.com",
     },
     {
-      name: "Projects",
+      name: "All Projects",
       link: "https://www.facebook.com",
     },
     {

@@ -1,10 +1,44 @@
 .projects {
+    --color-projects--project-wrap-bg: #0080ffeb;
+    --color-projects--project-wrap-border: white;
+    --color-projects--screenshot-wrap-bg: #5959594c;
+    --color-projects--screenshot-wrap-border: #ffffff63;
+    --color-projects--project-name-border-bottom: white;
+
+
+    --color-projects--btn: white;
+    --color-projects--btn-bg: #ffffff1a;
+    --color-projects--btn-border: #ffffffca;
+    --color-projects--btn-bg--hover: #ffffff2c;
+    --color-projects--btn-border--hover: #ffffff8f;
+    --color-projects--btn-bg--active: #ffffff33;
+    --color-projects--stack-wrap-bg: #0000002b;
+    --color-projects--stack-wrap-border: #ffffff56;
+    --color-projects--stack-item-bg: #00000049;
+
+
+}
+
+.projects {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
 }
+
+.projectTypeSelectorWrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0.5rem;
+}
+
+.projectTypeSelector {
+    border: 1px solid white;
+}
+
 
 .projectList {
     margin-top: 3rem;
@@ -15,13 +49,13 @@
 }
 
 .projectWrap {
-    background-color: rgba(0, 128, 255, 0.923);
+    background-color: var(--color-projects--project-wrap-bg);
     display: flex;
     padding: 1rem 0;
     position: relative;
     width: 80%;
     border-radius: 20px;
-    border: 1px solid white;
+    border: 1px solid var(--color-projects--project-wrap-border);
 }
 
 .screenshotWrap {
@@ -30,11 +64,11 @@
     top: -40px;
     width: fit-content;
     height: fit-content;
-    background-color: rgba(89, 89, 89, 0.298);
+    background-color: var(--color-projects--screenshot-wrap-bg);
     backdrop-filter: blur(10px);
     padding: 1rem;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.389);
+    border: 1px solid var(--color-projects--screenshot-wrap-border);
 }
 
 .screenshot {
@@ -52,7 +86,7 @@
 .name {
     place-self: end;
     margin: 0;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--color-projects--project-name-border-bottom);
 }
 
 .btnWrap {
@@ -68,43 +102,51 @@
     background-color: transparent;
     border-radius: 10px;
     outline: none;
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.793);
+    border: 1px solid var(--color-projects--btn);
+    background-color: var(--color-projects--btn-bg);
+    border-color: var(--color-projects--btn-border);
     cursor: pointer;
     box-shadow: 0px 1px 1px black;
     transition: background-color 0.15s;
+    
 }
 
 .btn:hover {
-    background-color: rgba(255, 255, 255, 0.174);
-    border-color: rgba(255, 255, 255, 0.561);
+    background-color: var(--color-projects--btn-bg--hover);
+    border-color: var(--color-projects--btn-border--hover);
     cursor: pointer;
 }
 
 .btn:active {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--color-projects--btn-bg--active);
     box-shadow: 0px 0px 1px black;
 
 }
 
+.moreInfo {
+    background-color: var(--color-projects--stack-wrap-bg);
+    border-color: var(--color-projects--stack-wrap-border);
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 1rem;
+}
 
 .stackWrap {
     display: flex;
     gap: 0.3rem;
-    background-color: rgba(0, 0, 0, 0.17);
+    background-color: var(--color-projects--stack-wrap-bg);
     width: fit-content;
     padding: 0.3rem 0.5rem;
     position: absolute;
     bottom: 0.5rem;
     left: 0.5rem;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.336);
+    border: 1px solid var(--color-projects--stack-wrap-border);
 }
 
 .stackItem {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.287);
+    background-color: var(--color-projects--stack-item-bg);
     border-radius: 6px;
 }
 
@@ -135,11 +177,15 @@
         left: 0;
         top: -50px;
     }
-
+    
     .name {
         place-self: center;
     }
     
-  
+    
 }
 
+
+.btnSelected, .btnSelected:hover {
+    border-color: greenyellow;
+}
